@@ -5,14 +5,21 @@
   <link rel="stylesheet" type="text/css" href="styles.css">
   <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Raleway:wght@400;700&display=swap" rel="stylesheet">  <script src="p5.js"></script>
   <script src="script.js"></script>
+  <script src="https://kit.fontawesome.com/0b4ec7f54b.js" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
 </head>
 <body>
   <header>
-    <div class="logo">
-      <h1>Family Garden</h1>
-    </div>
+    <div class="header-content">
+		<div class="logo">
+		  <h1>Family</h1>
+		  <h2>Garden Center</h2>
+		</div>
+		<div id="canvas-container"></div>
+	</div>
     <nav>
       <ul>
+		<li><a href="#">Home</a></li>
         <li><a href="#">Shop</a></li>
         <li><a href="#">About</a></li>
         <li><a href="#">Visit</a></li>
@@ -27,7 +34,6 @@
       <p>Cultivating Green Spaces & Growing Communities in Chicago</p>
       <button>Explore Our Shop</button>
     </div>
-	<img src="sprouts.jpg">
     <div id="canvas-container"></div>  
   </section>
 
@@ -39,7 +45,49 @@
   </section>
 
   <footer>
-    <p>&copy; 2025 Family Garden</p>
+    <div class="footer-column contact-info">
+		<h3>OPEN DAILY 10AM-6PM</h3>
+		<p>123 Willow Creek Lane</p>
+		<p>Springfield, IL 62704</p>
+		<p>217-555-1212</p>
+		<p><a href="mailto:info@meadowbrookgardens.com">info@familygardencenter.com</a></p>
+		<div class="fa-ul">
+			<li><span class="fa-li"><i class="fa-brands fa-facebook"></i></span></li>
+			<li><span class="fa-li"><i class="fa-brands fa-instagram"></i></span></li>
+		</div>
+	</div>
+
+	<div class="footer-column">
+		<h3>ABOUT</h3>
+		<ul>
+			<li><a href="#">Our Story</a></li>
+			<li><a href="#">Contact Us</a></li>
+			<li><a href="#">Location & Hours</a></li>
+			<li><a href="#">FAQ</a></li>
+		</ul>
+	</div>
+
+	<div class="footer-column">
+		<h3>WHAT WE OFFER</h3>
+		<ul>
+			<li><a href="#">Plants</a></li>
+			<li><a href="#">Gardening Supplies</a></li>
+			<li><a href="#">Gifts</a></li>
+			<li><a href="#">Workshops</a></li>
+		</ul>
+	</div>
+
+	<div class="footer-column">
+		<h3>WHAT'S NEW</h3>
+		<ul>
+			<li><a href="#">New Arrivals</a></li>
+			<li><a href="#">Seasonal Items</a></li>
+		</ul>
+	</div>
+
+	<div class="copyright">
+		<p>Copyright @2025<br>Family Garden Center</p>
+	</div>
   </footer>
 </body>
 </html>

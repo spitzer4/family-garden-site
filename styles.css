@@ -15,22 +15,34 @@ body {
 }
 
 header {
-	background-color: var(--green); /* Dark, earthy tone */
-	padding: 20px;
-	text-align: center;
+	background-color: var(--cream);
+	padding: 50px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.header-content {
+	display: flex;
+	align-items: center;
+}
+
+.logo {
+	display: flex;
+	flex-direction: column;
 }
 
 .logo h1 {
 	font-family: 'Amatic SC', cursive;
 	font-size: 3em;
-	color: var(--cream); /* Light, contrasting color */
+	color: var(--dark-green);
 	margin: 0;
 }
 
 .logo h2 {
 	font-family: 'Amatic SC', cursive;
-	font-size: 2em;
-	color: var(--cream); /* Light, contrasting color */
+	font-size: 1.5em;
+	color: var(--dark-green);
 	margin: 0;
 }
 
@@ -38,6 +50,7 @@ nav ul {
 	list-style: none;
 	padding: 0;
 	margin-top: 10px;
+	display: flex;
 }
 
 nav li {
@@ -47,12 +60,12 @@ nav li {
 
 nav a {
 	text-decoration: none;
-	color: var(--cream);
+	color: var(--dark-green);
 	font-weight: bold;
 }
 
 #hero {
-	/* background-image: url('hero-image.jpg'); */
+	background-image: url('sprouts.jpg');
 	background-color: var(--cream);
 	background-size: cover;
 	background-position: center;
@@ -76,7 +89,7 @@ nav a {
 #hero img {
 	padding: 20px;
 	width: 400px;
-	border-radius: 8px;
+	/* border-radius: 20px; */
 }
 
 #canvas-container {
@@ -84,7 +97,100 @@ nav a {
 	height: 300px;
 }
 
-footer {
+#featured-products {
+	padding: 20px;
+	/* display: flex;
+	flex-wrap: wrap; */
+	/* justify-content: space-around; */
 	text-align: center;
-	padding: 1em 0;
+}
+
+#canvas-container {
+	width: 50px;
+	height: 50px;
+}
+
+footer {
+	padding: 200px;
+	display: flex;
+	flex-wrap: wrap; /* Allows content to wrap on smaller screens */
+	justify-content: space-around; /* Distribute columns evenly */
+	align-items: flex-start; /* Align items to the top of each column */
+	color: var(--dark-green);
+}
+
+.footer-column {
+	flex: 1 1 200px; /* Each column takes up equal space, min width 200px */
+	margin-bottom: 20px; /* Space between columns on smaller screens */
+}
+
+.footer-column h3 {
+	margin-top: 0; /* Remove default margin from h3 */
+}
+
+.contact-info {
+	text-align: left; /* Align contact info to the left */
+}
+
+.contact-info p {
+	margin: 5px 0; /* Space between contact info lines */
+}
+
+.social-icons {
+	text-align: left; /* Align social icons to the left */
+}
+
+.social-icons a {
+	display: inline-block; /* Make icons behave like inline elements */
+	margin-right: 10px; /* Space between icons */
+}
+
+.social-icons img {
+	width: 20px; /* Adjust icon size as needed */
+	height: 20px;
+}
+
+ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+li {
+	margin-bottom: 10px;
+}
+
+a {
+	text-decoration: none;
+	color: var(--dark-green); /* Dark gray link color */
+}
+
+.copyright {
+	flex: 1 1 100%; /* Copyright takes full width */
+	text-align: center;
+	margin-top: 20px;
+}
+
+button {
+	background-color: var(--cream);
+	color: var(--green);
+	border-radius: 8px;
+}
+
+.fa-ul {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	text-align: left;
+}
+
+.fa-ul li {
+	margin-right: 25px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+	.footer-column {
+		flex: 1 1 150px; /* Adjust column width for smaller screens */
+	}
 }
