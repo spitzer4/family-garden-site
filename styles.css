@@ -1,0 +1,90 @@
+:root {
+	--navy: #003262;
+	--cream: #FEFAE0;
+	--light-orange: #DDA15E;
+	--orange: #BC6C25;
+	--green: #606C38;
+	--dark-green: #283618;
+}
+
+body {
+	font-family: 'Raleway', sans-serif;
+	margin: 0;
+	background-color: var(--cream);
+	color: var(--dark-green);
+}
+
+header {
+	background-color: var(--green); /* Dark, earthy tone */
+	padding: 20px;
+	text-align: center;
+}
+
+.logo h1 {
+	font-family: 'Amatic SC', cursive;
+	font-size: 3em;
+	color: var(--cream); /* Light, contrasting color */
+	margin: 0;
+}
+
+.logo h2 {
+	font-family: 'Amatic SC', cursive;
+	font-size: 2em;
+	color: var(--cream); /* Light, contrasting color */
+	margin: 0;
+}
+
+nav ul {
+	list-style: none;
+	padding: 0;
+	margin-top: 10px;
+}
+
+nav li {
+	display: inline;
+	margin: 0 15px;
+}
+
+nav a {
+	text-decoration: none;
+	color: var(--cream);
+	font-weight: bold;
+}
+
+#hero {
+	/* background-image: url('hero-image.jpg'); */
+	background-color: var(--cream);
+	background-size: cover;
+	background-position: center;
+	height: 500px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	color: var(--cream);
+	text-align: center;
+	padding: 20px;
+}
+
+.hero-content {
+	background-color: var(--navy); /* Semi-transparent overlay */
+	padding: 20px;
+	border-radius: 8px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+#hero img {
+	padding: 20px;
+	width: 400px;
+	border-radius: 8px;
+}
+
+#canvas-container {
+	width: 100%;
+	height: 300px;
+}
+
+footer {
+	text-align: center;
+	padding: 1em 0;
+}
