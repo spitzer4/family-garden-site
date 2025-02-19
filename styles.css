@@ -16,10 +16,11 @@ body {
 
 header {
 	background-color: var(--cream);
-	padding: 50px;
+	padding: 20px 50px;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .header-content {
@@ -49,12 +50,11 @@ header {
 nav ul {
 	list-style: none;
 	padding: 0;
-	margin-top: 10px;
+	margin: 0;
 	display: flex;
 }
 
 nav li {
-	display: inline;
 	margin: 0 15px;
 }
 
@@ -62,6 +62,11 @@ nav a {
 	text-decoration: none;
 	color: var(--dark-green);
 	font-weight: bold;
+	transition: color 0.3s;
+}
+
+nav a:hover {
+	color: var(--orange);
 }
 
 #hero {
@@ -80,74 +85,96 @@ nav a {
 }
 
 .hero-content {
-	background-color: var(--navy); /* Semi-transparent overlay */
+	background-color: var(--navy);
 	padding: 20px;
 	border-radius: 8px;
 	box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
-#hero img {
-	padding: 20px;
-	width: 400px;
-	/* border-radius: 20px; */
+.hero-content h3 {
+	font-size: 2em;
+	margin: 0 0 10px;
 }
 
-#canvas-container {
-	width: 100%;
-	height: 300px;
+.hero-content p {
+	font-size: 1.2em;
+	margin: 0 0 20px;
+}
+
+.hero-content button {
+	background-color: var(--orange);
+	color: var(--cream);
+	border: none;
+	padding: 10px 20px;
+	font-size: 1em;
+	border-radius: 8px;
+	cursor: pointer;
+	transition: background-color 0.3s;
+}
+
+.hero-content button:hover {
+	background-color: var(--dark-green);
 }
 
 #featured-products {
-	padding: 20px;
-	/* display: flex;
-	flex-wrap: wrap; */
-	/* justify-content: space-around; */
+	padding: 50px 20px;
 	text-align: center;
 }
 
-#canvas-container {
-	width: 50px;
-	height: 50px;
+#featured-products h2 {
+	font-size: 2.5em;
+	margin-bottom: 20px;
+}
+
+.product-grid {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 20px;
 }
 
 footer {
+	background-color: var(--dark-green);
 	padding: 200px;
 	display: flex;
 	flex-wrap: wrap; /* Allows content to wrap on smaller screens */
 	justify-content: space-around; /* Distribute columns evenly */
 	align-items: flex-start; /* Align items to the top of each column */
-	color: var(--dark-green);
+	color: var(--cream);
 }
 
 .footer-column {
-	flex: 1 1 200px; /* Each column takes up equal space, min width 200px */
-	margin-bottom: 20px; /* Space between columns on smaller screens */
+	flex: 1 1 200px;
+	margin-bottom: 20px;
+	text-align: left;
 }
 
 .footer-column h3 {
-	margin-top: 0; /* Remove default margin from h3 */
+	margin-top: 0;
 }
 
-.contact-info {
-	text-align: left; /* Align contact info to the left */
-}
-
-.contact-info p {
-	margin: 5px 0; /* Space between contact info lines */
+.contact-info p,
+.contact-info a {
+	margin: 5px 0;
+	color: var(--cream);
 }
 
 .social-icons {
-	text-align: left; /* Align social icons to the left */
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 .social-icons a {
-	display: inline-block; /* Make icons behave like inline elements */
-	margin-right: 10px; /* Space between icons */
+	display: inline-block;
+	margin-right: 10px;
+	color: var(--cream);
+	font-size: 1.5em;
+	transition: color 0.3s;
 }
 
-.social-icons img {
-	width: 20px; /* Adjust icon size as needed */
-	height: 20px;
+.social-icons a:hover {
+	color: var(--orange);
 }
 
 ul {
@@ -162,19 +189,25 @@ li {
 
 a {
 	text-decoration: none;
-	color: var(--dark-green); /* Dark gray link color */
+	color: var(--cream);
 }
 
-.copyright {
-	flex: 1 1 100%; /* Copyright takes full width */
-	text-align: center;
-	margin-top: 20px;
+a:hover {
+	color: var(--orange);
 }
 
 button {
 	background-color: var(--cream);
 	color: var(--green);
 	border-radius: 8px;
+	border: none;
+	padding: 10px 20px;
+	cursor: pointer;
+	transition: background-color 0.3s;
+}
+
+button:hover {
+	background-color: var(--light-orange);
 }
 
 .fa-ul {
@@ -188,9 +221,14 @@ button {
 	margin-right: 25px;
 }
 
-/* Responsive adjustments */
+.copyright {
+	flex: 1 1 100%;
+	text-align: center;
+	margin-top: 20px;
+}
+
 @media (max-width: 768px) {
 	.footer-column {
-		flex: 1 1 150px; /* Adjust column width for smaller screens */
+	flex: 1 1 150px;
 	}
 }
